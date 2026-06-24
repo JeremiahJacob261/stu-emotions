@@ -1,0 +1,5 @@
+# Optional Worker runtime variables for local development.
+# This app does not currently need any Worker secrets because it uses
+# Cloudflare's AI binding from wrangler.jsonc.
+
+# EXAMPLE_RUNTIME_VALUE=example

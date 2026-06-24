@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Student Emotion Coach</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="chat-panel" aria-label="Student emotion coach">
+        <header class="app-header">
+          <div>
+            <p class="eyebrow">Student Emotion Coach</p>
+            <h1>Check in, then choose the next step.</h1>
+          </div>
+          <button class="icon-button" id="clearButton" type="button" aria-label="Clear conversation" title="Clear conversation">
+            Clear
+          </button>
+        </header>
+
+        <div class="chat-log" id="chatLog" aria-live="polite"></div>
+
+        <form class="composer" id="composer">
+          <label class="sr-only" for="messageInput">Message</label>
+          <textarea id="messageInput" name="message" maxlength="2000" placeholder="What's going on?" required></textarea>
+          <button class="send-button" id="sendButton" type="submit">Send</button>
+        </form>
+      </section>
+
+      <aside class="signal-panel" aria-label="Latest emotion scores">
+        <div class="signal-header">
+          <p class="eyebrow">Latest Signal</p>
+          <strong id="riskBadge" class="risk-badge">none</strong>
+        </div>
+        <div id="topSignals" class="top-signals"></div>
+        <div id="allSignals" class="all-signals"></div>
+      </aside>
+    </main>
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>

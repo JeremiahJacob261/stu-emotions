@@ -1,0 +1,19 @@
+{
+  "name": "student-emotion-coach",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node node_modules/wrangler/bin/wrangler.js dev",
+    "deploy": "node node_modules/wrangler/bin/wrangler.js deploy",
+    "test": "node node_modules/vitest/vitest.mjs run",
+    "typecheck": "node node_modules/typescript/bin/tsc --noEmit",
+    "check": "npm run typecheck && npm test"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "latest",
+    "typescript": "latest",
+    "vitest": "latest",
+    "wrangler": "latest"
+  }
+}
